@@ -19,6 +19,13 @@ body {
   transform: translateX(-50%);
 }
 
+.theme-button-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .theme-toggle button {
   width: 50px;
   height: 50px;
@@ -35,6 +42,23 @@ body {
 .theme-toggle button:hover {
   background-color: #666;
   transform: scale(1.1);
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.theme-button-wrapper:hover .tooltip {
+  display: block;
 }
 
 .calculator {
@@ -113,4 +137,9 @@ body.light .theme-toggle button {
 
 body.light .theme-toggle button:hover {
   background-color: #ccc;
+}
+
+body.light .tooltip {
+  background-color: #ddd;
+  color: #000;
 }
